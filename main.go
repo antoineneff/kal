@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/antoineneff/kal/utils"
 	"github.com/eiannone/keyboard"
 )
 
@@ -26,7 +27,7 @@ func updateMonth(dir int) {
 }
 
 func main() {
-	clear()
+	utils.Clear()
 
 	printMonth()
 
@@ -60,7 +61,7 @@ func main() {
 		case keyboard.KeyArrowDown:
 			currentYear += -1
 		}
-		reset()
+		utils.Reset()
 		printMonth()
 	}
 }

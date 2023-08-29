@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"fmt"
@@ -6,13 +6,13 @@ import (
 	"os/exec"
 )
 
-func clear() {
+func Clear() {
 	c := exec.Command("clear")
 	c.Stdout = os.Stdout
 	c.Run()
 }
 
-func reset() {
+func Reset() {
 	// Erase content from cursor to beginning of screen
 	fmt.Printf("\033[1J")
 	// Move cursor to home position (0, 0)
